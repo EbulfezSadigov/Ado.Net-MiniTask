@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+@model LoginViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="mb-5">Login</h1>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <form method="post">
+                    <div class="mb-3">
+                        <input class="form-control" asp-for="Email" placeholder="Email">
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" asp-for="Password" placeholder="Password">
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div>
+                    <div class="mb-3">
+                        <input asp-for="StayLoggedIn"/>
+                        <label asp-for="StayLoggedIn"></label>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
